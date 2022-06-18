@@ -20,5 +20,12 @@ class LengthOfLongestSubstringTest {
         assertEquals(1,lengthOfLongestSubstring.solution("bbbbb"));
         assertEquals(3,lengthOfLongestSubstring.solution("pwwkew"));
         assertEquals(0,lengthOfLongestSubstring.solution(""));
+
+        assertEquals(2,lengthOfLongestSubstring.solution2("abba"));
+        assertEquals(3,lengthOfLongestSubstring.solution2("dvdf"));
+        assertEquals(3,lengthOfLongestSubstring.solution2("abcabcbb"));
+        assertEquals(1,lengthOfLongestSubstring.solution2("bbbbb"));
+        assertEquals(3,lengthOfLongestSubstring.solution2("pwwkew"));
+        assertEquals(0,lengthOfLongestSubstring.solution2(""));
     }
 }

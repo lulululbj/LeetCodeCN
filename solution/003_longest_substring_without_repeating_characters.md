@@ -58,5 +58,25 @@
     }
 ```
 
+优化版本，滑动窗口经典写法
+
+```java
+    public int solution2(String s) {
+        int max = 0;
+        int head = 0;
+        Character c;
+        HashMap<Character, Integer> maps = new HashMap<>();
+        for (int tail = 0; tail < s.length(); tail++) {
+            c = s.charAt(tail);
+            if (maps.containsKey(c)) {
+                head = Math.max(head,maps.get(c)+1);
+            }
+            maps.put(c, tail);
+            max = Math.max(max, tail - head + 1);
+        }
+        return max;
+    }
+```
+
 * 时间复杂度：O(n)
 * 空间复杂度：O(n)
